@@ -80,6 +80,7 @@ a {
     height: 35px;
     background-color: transparent;
     border: transparent;
+    font-size: 16px;
 }
 
 .buttonHeaderHébergement:hover {
@@ -92,6 +93,7 @@ a {
     height: 35px;
     background-color: transparent;
     border: transparent;
+    font-size: 16px;
 }
 
 .buttonHeaderActivité:hover {
@@ -128,7 +130,7 @@ a {
 
 .icone{
     color: black;
-    font-size: 18px;
+    font-size: 20px;
 }
 .noEspaceInput {
     display: flex;
@@ -164,6 +166,11 @@ a {
 }
 
 .buttonFiltre {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    gap: 10px;
     background-color: transparent;
     border: 3px solid #F2F2F2;
     border-radius: 50px;
@@ -233,11 +240,12 @@ a {
     width: 65%;
 }
 
-.hebergements h1 {
+.hebergements h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0px;
+    margin-bottom: 30px;
 }
 
 .positionCards {
@@ -365,7 +373,7 @@ a {
     height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-
+    object-fit: cover;
 }
 
 .activitesCardsTxt {
@@ -402,8 +410,23 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    .afterHeaderText {
+        margin-top: 50px;
+    }
+
+    /* Filtres */
+    .filtres {
+        flex-wrap: wrap;
+    }
+    .filtres h2{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    /* Box Hebergements + Les plus populaires */
+
     .hebergements-and-populaires {
-        flex-direction: column;
+       flex-wrap: wrap;
     }
 
     .hebergements {
@@ -414,7 +437,7 @@ a {
         width: 100%;
         margin-top: 50px;
     }
-
+    /* Populaires */
     .populaires-cards {
         display: flex;
         flex-direction: row;
@@ -432,9 +455,123 @@ a {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+    /*Activités*/
+    .activitesCards {
+        width: 193px;
+        height: 200px;
+    }
+
+    .activitesCardsTxt {
+        width: 193px;
+        height: 70px;
+    }
+
+    /* Footer */
+    .boxFooter {
+        width: 924px;
+        gap: 110px
+    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container{
+        padding: 0 0px;
+    }
+    /*Header*/
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .logoBooki {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .divButtonHeader {
+        width: 100%;
+        gap: 0;
+    }
+
+    .buttonHeaderHébergement,
+    .buttonHeaderActivité {
+        width: 50%;
+        border-bottom: 2px solid #F2F2F2;
+        border-bottom-: 10px;
+    }
+
+    .buttonHeaderHébergement:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .buttonHeaderActivité:hover {
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+    /* After Header Text */
+    .afterHeaderText {
+        justify-content: center;
+        padding-left: 10px;
+        font-size: 22px;
+    }
+
+    /* barre de recherche */
+    .searchBox {
+        justify-content: center;
+    }
+    .inputSearch {
+        width: 250px;
+        margin-right: -10px;
+    }
+    .buttonSearch {
+        width: 49px;
+        height: 49px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
+        font-size: 0px;
+    }
+    .buttonSearch .fa-sistrix{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    /* Filtres */
+    .filtres {
+        justify-content: center;
+    }
+    .filtres h2{
+        padding-left: 10px;
+    }
+    .buttonFiltreEconomique, .buttonFiltreFamille, .buttonFiltreRomantique, .buttonFiltreNosPepites {
+        width: 162.5px;
+        height: 50px;
+    }
+
+    .boxInfo {
+        padding-left: 10px;
+    }
+
+    /* Hebergements et populaires */
+    .hebergements-and-populaires section {
+    }
+
+    .hebergements-and-populaires .hebergements {
+        order: 2;
+        background-color: transparent;
+    }
+
+    .hebergements-and-populaires .populaires {
+        order: 1;
+        border-radius: 0px;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 335px;
+        height: 146px;
+    }
 }
