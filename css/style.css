@@ -110,6 +110,7 @@ a {
 
 .afterHeaderText p {
     margin-top: 0;
+    font-size: 18px;
 }
 
 /* search Bar */
@@ -131,7 +132,7 @@ a {
 
 .icone{
     color: black;
-    font-size: 20px;
+    font-size: 22px;
 }
 .noEspaceInput {
     display: flex;
@@ -155,7 +156,7 @@ a {
     border-color: transparent;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
 }
 .buttonSearch .fa-sistrix{
@@ -169,11 +170,14 @@ a {
     margin-top: 30px;
     gap: 20px;
 }
-
+.positionFiltres {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .buttonFiltre {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding-left: 20px;
     gap: 10px;
     background-color: transparent;
@@ -264,16 +268,15 @@ a {
 .positionCards {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 22px;
+    align-items: center;
+    gap: 1%;
     row-gap: 30px;
 }
 
 .firstCard {
-    display: flex;
-    width: 255px;
-    height: 210px;
+    flex: 0 1 calc(32% - 14px);
+    min-width: 100px;
     flex-direction: column;
     align-items: center;
     background-color: white;
@@ -283,10 +286,10 @@ a {
 
 .firstCard img {
     display: flex;
-    width: 245px;
-    height: 124px;
+    width: 96%;
+    height: 110px;
     object-fit: cover;
-    margin-top: 5px;
+    padding: 5px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -298,7 +301,7 @@ a {
 }
 
 .textCardHebergement {
-    margin-top: -16px;
+    margin-top: -10px;
     margin-left: 15px;
     align-self: flex-start;
 }
@@ -306,6 +309,7 @@ a {
 .starsCardHebergement {
     margin-top: -12px;
     margin-left: 15px;
+    padding-bottom: 10px;
     align-self: flex-start;
 }
 
@@ -378,12 +382,13 @@ a {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .activitesCards {
     display: flex;
-    width: 297px;
+    width: 100%;  /* S'adapte au conteneur */
+    max-width: 297px;  /* Limite maximale */
+    min-width: 150px;
     height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -393,7 +398,9 @@ a {
 
 .activitesCardsTxt {
     display: flex;
-    width: 297px;
+    width: 100%;  /* S'adapte au conteneur */
+    max-width: 297px;  /* Limite maximale */
+    min-width: 150px;
     height: 59px;
     background-color: white;
     border-bottom-left-radius: 20px;
@@ -409,7 +416,7 @@ a {
 .boxFooter {
     display: flex;
     align-items: flex-start;
-    width: 1340px;
+    width: 100%;
     height: 163px;
     margin-top: 80px;
     background-color: var(--main-bg-color);
@@ -418,291 +425,4 @@ a {
 
 .boxFooter div:first-child {
     margin-left: 30px;
-}
-
-
-/**** Tablette Version *****/
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    .afterHeaderText {
-        margin-top: 50px;
-    }
-
-    /* Filtres */
-    .filtres {
-        flex-wrap: wrap;
-    }
-    .filtres h2{
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    /* Box Hebergements + Les plus populaires */
-
-    .hebergements-and-populaires {
-       flex-wrap: wrap;
-    }
-
-    .hebergements {
-        width: 100%;
-    }
-
-    .populaires {
-        width: 100%;
-        margin-top: 50px;
-    }
-    /* Hebergements */
-    .positionCards {
-    gap: 19px;
-    row-gap: 30px;
-    }
-    .firstCard {
-        width: 260px;
-        height: 207px;
-    }
-    .firstCard img {
-        width: 250px;
-        height: 114px;
-    }
-
-    .hebergements h3 {
-        margin-top: 30px;
-        margin-bottom: 0px;
-    }
-
-    /* Populaires */
-    .fa-chart-line {
-        font-size: 18px;
-    }
-
-    .populaires-cards {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .populaires-cards a {
-        width: 30%;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 15px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    }
-    /*Activités*/
-    .activitesCards {
-        width: 193px;
-        height: 200px;
-    }
-
-    .activitesCardsTxt {
-        width: 193px;
-        height: 70px;
-    }
-
-    /* Footer */
-    .boxFooter {
-        width: 924px;
-        gap: 110px
-    }
-}
-/**** Phone Version *****/
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-
-    .main-container{
-        padding: 0 0px;
-    }
-    /*Header*/
-    .header {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .logoBooki {
-        width: 91px;
-        height: 29px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-    }
-    .divButtonHeader {
-        width: 100%;
-        gap: 0;
-    }
-
-    .buttonHeaderHébergement,
-    .buttonHeaderActivité {
-        width: 50%;
-        height: 60px;
-        border-bottom: 2px solid #F2F2F2;
-    }
-
-    .buttonHeaderHébergement:hover {
-        border-top: none;
-        border-bottom: 2px solid var(--main-color);
-    }
-
-    .buttonHeaderActivité:hover {
-        border-top: none;
-        border-bottom: 2px solid var(--main-color);
-    }
-    /* After Header Text */
-    .afterHeaderText {
-        justify-content: center;
-        padding-left: 10px;
-        font-size: 22px;
-    }
-
-    /* barre de recherche */
-    .searchBox {
-        justify-content: center;
-    }
-    .inputSearch {
-        width: 280px;
-        height: 50px;
-        margin-right: -10px;
-    }
-    .buttonSearch {
-        width: 56px;
-        height: 56px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
-        filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.5));
-        font-size: 0px;
-    }
-    .buttonSearch .fa-sistrix{
-        font-size: 20px;
-        font-weight: 700;
-    }
-    .boxIcone{
-        width: 55px;
-        height: 55px;
-    }
-    .fa-location-dot {
-        font-size: 22px;
-    }
-    /* Filtres */
-    .filtres {
-        justify-content: start;
-        margin-top: 20px;
-    }
-    .filtres h2{
-        padding-left: 10px;
-    }
-    .buttonFiltre {
-        margin-right: -30px;
-        margin-left: 20px;
-        gap: 20px;
-    }
-    .buttonFiltreEconomique, .buttonFiltreFamille, .buttonFiltreRomantique, .buttonFiltreNosPepites {
-        width: 200px;
-        height: 55px;
-    }
-    .fa-money-bill-wave, .fa-person, .fa-heart, .fa-fire {
-        font-size: 24px;
-    }
-    .boxInfo {
-        padding-left: 10px;
-    }
-    .info {
-        width: 30px;
-        height: 28px;
-        font-size: 14px;
-        margin-left: 15px;
-    }
-    .boxInfo p {
-        font-size: 20px;
-    }
-    /* Hebergements et populaires */
-    .hebergements-and-populaires .hebergements {
-        order: 2;
-        background-color: transparent;
-    }
-
-    .hebergements-and-populaires .populaires {
-        order: 1;
-        width: 7590px;
-        border-radius: 0px;
-    }
-    /* Populaires */
-    .fa-chart-line {
-        font-size: 20px;
-    }
-
-    .section-title {
-        font-size: 25px;
-    }
-
-    .populaires-cards {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .populaires-cards .card {
-        margin-top: 0px;
-    }
-    .card {
-        width: 395px;
-        height: 146px;
-    }
-    .card img {
-        width: 120px;
-        height: 146px;
-    }
-    .populaires-cards .card-title {
-        font-size: 20px;
-    }
-    .populaires-cards .card-subtitle {
-        font-size: 18px;
-    }
-    .fa-star {
-        font-size: 14px;
-    }
-    /* Hebergements */
-    .hebergements h2 {
-        margin-bottom: 20px;
-    }
-    .firstCard {
-        width: 450px;
-        height: 207px;
-    }
-    .firstCard img {
-        width: 390px;
-        height: 124px;
-    }
-    .hebergements h3 {
-        margin-top: 20px;
-        font-size: 20px;
-    }
-    /* Activités */
-    .activitesCards {
-        width: 400px;
-        height: 180px;
-    }
-    .activitesCardsTxt {
-        width: 400px;
-        height: 59px;
-        align-items: center;
-    }
-    .activitesCardsTxt h4 {
-        font-size: 20px;
-        margin-left: 10px;
-    }
-
-    /* Footer */
-    .boxFooter {
-        justify-items: start;
-        flex-direction: column;
-        width: 100%;
-        height: 461px;
-        gap: 15px;
-        padding-left: 20px;
-    }
-    .boxFooter div:first-child {
-        margin-left: 0;
-    }
 }

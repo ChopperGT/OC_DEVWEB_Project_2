@@ -1,0 +1,132 @@
+/**** Tablette Version *****/
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    /*Header*/
+    .logoBooki {
+        width: 8%;
+        height: 8%;
+        margin-top: 20px;
+    }
+
+    /*After Header*/
+    .afterHeaderText {
+        margin-top: 50px;
+    }
+
+    .afterHeaderText h2 {
+        font-size: 18px;
+    }
+
+    .afterHeaderText p {
+        font-size: 14px;
+    }
+
+    /* Filtres */
+    .filtres {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .filtres h2 {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+
+    .buttonFiltreFamille {
+        width: 130px;
+    }
+
+    /* Bon Info*/
+    .boxInfo p {
+        font-size: 17px;
+    }
+
+    /* Box Hebergements + Les plus populaires */
+    .hebergements-and-populaires {
+        flex-wrap: wrap;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* Hebergements */
+    .hebergements h2 {
+        font-size: 21px;
+    }
+
+    .positionCards {
+        gap: 19px;
+        row-gap: 30px;
+    }
+
+    .firstCard {
+        width: 260px;
+        height: 207px;
+    }
+
+    .firstCard img {
+
+    }
+
+    .hebergements h3 {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    /* Populaires */
+    .fa-chart-line {
+        font-size: 18px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 15px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .populaires-cards .card-rating {
+        font-size: 15px;
+    }
+
+    /*Activités*/
+    .activitesCards {
+        width: 100%;
+        max-width: 193px;
+        min-width: 140px;
+        height: 200px;
+    }
+
+    .activitesCardsTxt {
+        width: 100%;
+        max-width: 193px;
+        min-width: 140px;
+        height: 70px;
+    }
+
+    /* Footer */
+    .boxFooter {
+        gap: 110px
+    }
+}
