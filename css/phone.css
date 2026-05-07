@@ -27,6 +27,9 @@
 
     .buttonHeaderHébergement,
     .buttonHeaderActivité {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 50%;
         height: 60px;
         border-bottom: 2px solid #F2F2F2;
@@ -182,7 +185,7 @@
     .hebergements h2 {
         margin-bottom: 20px;
     }
-    .firstCard {
+    .positionCards a {
         width: 100%;
         max-width: 460px;
         min-width: 160px;
@@ -196,13 +199,25 @@
         font-size: 18px;
     }
     .hebergements h3 {
-        margin-top: 20px;
+        margin-top: 0px;
+        margin-bottom: 20px;
         font-size: 20px;
+    }
+    .hebergements h4 {
+        font-size: 20px;
+        margin-top: 20px;
     }
     /* Activités */
     .activitesCardsPosition {
         flex-direction: column;
         align-items: center;
+        margin-left: 20px;
+    }
+    .activitesCardsPosition a {
+            width: 100%;
+            max-width: 460px;
+            display: flex;
+            flex-direction: column;
     }
     .activitesCardsPosition article {
         width: 100%;
@@ -225,7 +240,7 @@
         height: 70px;
         box-sizing: border-box;
     }
-    .activitesCardsTxt h4 {
+    .activitesCardsTxt h3 {
         font-size: 20px;
         margin-left: 10px;
     }

@@ -273,8 +273,7 @@ a {
     gap: 1%;
     row-gap: 30px;
 }
-
-.firstCard {
+.positionCards a {
     flex: 0 1 calc(32% - 14px);
     min-width: 100px;
     flex-direction: column;
@@ -330,7 +329,13 @@ a {
     justify-content: space-between;
     align-items: center;
 }
-
+.populaires-title h2 {
+    margin-top: 0px;
+}
+.fa-chart-line {
+    font-size: 20px;
+    margin-top: -15px;
+}
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
@@ -408,7 +413,7 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.activitesCardsTxt h4 {
+.activitesCardsTxt h3 {
     padding-left: 15px;
 }
 

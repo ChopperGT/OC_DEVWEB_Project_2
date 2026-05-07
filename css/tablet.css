@@ -67,19 +67,18 @@
         gap: 19px;
         row-gap: 30px;
     }
-
-    .firstCard {
+    .positionCards a {
         width: 260px;
         height: 207px;
     }
 
-    .firstCard img {
-
+    .firstCard h3 {
+        font-size: 15px;
     }
 
     .hebergements h3 {
-        margin-top: 30px;
-        margin-bottom: 0px;
+        margin-top: 3px;
+        margin-bottom: 20px;
     }
 
     /* Populaires */
