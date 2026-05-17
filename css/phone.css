@@ -223,8 +223,10 @@
     justify-items: start;
     flex-direction: column;
     gap: 15px;
-    padding-left: 20px;
     max-height: 500px;
+}
+.boxFooter div {
+    padding-left: 20px;
 }
 .boxFooter div:first-child {
     margin-left: 0;
